@@ -1,5 +1,13 @@
 # Astro Starter Kit: Basics
 
+
+## Tech Stack
+- Astro
+- Drizzle
+- Postgres
+- Better Auth
+- CF Pages
+
 ```sh
 pnpm create astro@latest -- --template basics
 ```
