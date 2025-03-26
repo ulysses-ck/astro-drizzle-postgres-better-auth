@@ -1,6 +1,6 @@
 ---
-import db from "@/db";
-import { todo } from "@/db/schema";
+import TodosComponent from "@/components/react/todos.tsx"
+
 let email = "";
 if (Astro.locals.session && Astro.locals.user) {
   email = Astro.locals.user.email;
@@ -8,17 +8,9 @@ if (Astro.locals.session && Astro.locals.user) {
   // Redirect to login page if the user is not authenticated
   return Astro.redirect("/auth/login");
 }
-const todos = await db.select().from(todo);
 ---
 
 <div>
   <h2>Welcome {email} | Todo List</h2>
-  {
-    todos.map((todo) => (
-      <div>
-        <h3>{todo.title}</h3>
-        <p>{todo.content}</p>
-      </div>
-    ))
-  }
+  <TodosComponent client:load />
 </div>
