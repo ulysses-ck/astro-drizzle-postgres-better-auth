@@ -1,0 +1,9 @@
+---
+import LoginComponent from "@/components/react/login.tsx";
+
+if (Astro.locals.session && Astro.locals.user) {
+  Astro.redirect("/todos");
+}
+---
+
+<LoginComponent client:load />

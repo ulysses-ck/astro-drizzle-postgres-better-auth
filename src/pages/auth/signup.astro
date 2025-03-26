@@ -1,0 +1,8 @@
+---
+import SignupComponent from "@/components/react/signup.tsx";
+if (Astro.locals.session && Astro.locals.user) {
+  Astro.redirect("/todos");
+}
+---
+
+<SignupComponent client:load />
