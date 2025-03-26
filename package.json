@@ -9,6 +9,7 @@
     "astro": "astro"
   },
   "dependencies": {
+    "@astrojs/cloudflare": "12.3.0",
     "@astrojs/react": "4.2.1",
     "@types/react": "19.0.12",
     "@types/react-dom": "19.0.4",
@@ -19,6 +20,7 @@
     "drizzle-seed": "^0.3.1",
     "drizzle-zod": "^0.7.0",
     "pg": "^8.14.1",
+    "postgres": "^3.4.5",
     "react": "19.0.0",
     "react-dom": "19.0.0"
   },
