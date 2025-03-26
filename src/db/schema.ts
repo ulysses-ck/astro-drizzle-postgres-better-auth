@@ -1,4 +1,4 @@
-import { pgTable, text, timestamp } from "drizzle-orm/pg-core";
+import { pgTable, text, timestamp, serial } from "drizzle-orm/pg-core";
 import {
     createSelectSchema,
     createInsertSchema,
@@ -6,7 +6,7 @@ import {
 } from "drizzle-zod";
 
 export const todo = pgTable("todo", {
-	id: text("id").primaryKey(),
+	id: serial("id").primaryKey(),
 	title: text('title').notNull(),
 	content: text('content').notNull(),
 	createdAt: timestamp('created_at').notNull(),
